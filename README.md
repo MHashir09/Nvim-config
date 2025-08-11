@@ -2,7 +2,7 @@
 
 This is a simple neovim configuration I made for my personal use. Its my first time creating one, I followed typecraft, primeagen to learn how to configure neovim, so if you also want to make your own, check their individual playlists. I shared this on github and created an installation script because if I lose my config due to some reason, I can easily back it up from here but if you wanna try this just run the installation script below in your terminal but first make sure you meet some few requirements listed below. Thank you for your visit („• ᴗ •„)
 
-![Neovim Configuration Demo](./assets/nvim-demo.gif)
+![Neovim Configuration Demo](./nvim-demo.gif)
 
 ## Features
 - LSP support for languages like python, javascript, c and cpp, html and css etc.
