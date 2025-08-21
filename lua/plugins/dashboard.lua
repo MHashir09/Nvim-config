@@ -9,7 +9,7 @@ return {
       -- Create a new empty buffer to switch away from dashboard
       vim.cmd('enew')
       -- Delete dashboard buffer forcefully
-      vim.api.nvim_buf_delete(bufnr, {force = true})
+      vim.api.nvim_buf_delete(bufnr, { force = true })
       -- Run the command
       vim.cmd(cmd)
     end
@@ -18,16 +18,16 @@ return {
       theme = 'hyper',
       config = {
         header = {
-          ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
-          ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
-          ' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
-          ' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
-          ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
-          ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
+          [[  _________ **                 **_________                                 ]],
+          [[ /   _____//  |______ _______  \__    ___/___   _____ ______  ** ** ______]],
+          [[ \_____  \\   **\**  \\_  __ \   |    |_/ ** \ /     \\**__ \|  |  \/  ___/]],
+          [[ /        \|  |  / ** \|  | \/   |    |\  **_/|  Y Y  \  |_> >  |  /\___ \ ]],
+          [[/_______  /|__| (____  /__|      |____| \___  >__|_|  /   **/|**__//____  >]],
+          [[        \/           \/                     \/      \/|__|              \/ ]],
         },
         center = {
           {
-            icon = ' ',
+            icon = ' ',
             desc = 'Recently opened files',
             action = function()
               open_and_close_dashboard('Telescope oldfiles')
@@ -35,7 +35,7 @@ return {
             shortcut = 'SPC f r',
           },
           {
-            icon = ' ',
+            icon = ' ',
             desc = 'Find File',
             action = function()
               open_and_close_dashboard('Telescope find_files')
@@ -43,7 +43,7 @@ return {
             shortcut = 'SPC f f',
           },
           {
-            icon = ' ',
+            icon = ' ',
             desc = 'Find Word',
             action = function()
               open_and_close_dashboard('Telescope live_grep')
@@ -51,7 +51,7 @@ return {
             shortcut = 'SPC f w',
           },
           {
-            icon = ' ',
+            icon = ' ',
             desc = 'Open config',
             action = function()
               open_and_close_dashboard('edit ~/.config/nvim/init.lua')
@@ -61,13 +61,11 @@ return {
         },
         footer = { 'Have a nice day!' },
       },
-
       hide = {
         statusline = true,
         tabline = true,
         winbar = true,
       },
-
       preview = {
         command = nil,
         file_path = nil,
@@ -82,7 +80,6 @@ return {
       highlight clear DashboardCenter
       highlight clear DashboardShortCut
       highlight clear DashboardFooter
-
       highlight DashboardHeader    guifg=#ff66cc guibg=NONE gui=bold
       highlight DashboardCenter    guifg=#ff66cc guibg=NONE
       highlight DashboardShortCut  guifg=#ff66cc guibg=NONE gui=bold
@@ -91,5 +88,4 @@ return {
     ]]
   end,
 }
-
 
