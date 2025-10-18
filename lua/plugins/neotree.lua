@@ -4,12 +4,12 @@ return {
   dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons", 
+      "nvim-tree/nvim-web-devicons",
   },
   lazy = false,
 
   config = function()
-    vim.keymap.set('n', '<leader>f', ':Neotree filesystem toggle right<CR>', {}) -- sets keymap to open and close neo-tree
+    vim.keymap.set('n', '<leader>f', ':Neotree filesystem toggle left<CR>', {}) -- sets keymap to open and close neo-tree
 
     vim.keymap.set('n', '<leader>e', function()  -- sets keymap and a function to switch between neo-tree and current file     and vice versa
     local ft = vim.bo.filetype
