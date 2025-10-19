@@ -36,10 +36,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- Remove ~ from empty lines
 vim.opt.fillchars = { eob = " " }
 
--- Highlight trailing spaces
-vim.cmd [[highlight ExtraWhitespace ctermbg=red guibg=red]]
-vim.cmd [[match ExtraWhitespace /\S\zs\s\+$/]]
-
 -- Remove trailing whitespace on save
 vim.cmd [[autocmd BufWritePre * %s/\s\+$//e]]
 
