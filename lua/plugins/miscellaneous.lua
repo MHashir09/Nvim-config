@@ -17,12 +17,6 @@ return {
         lazy = false,
     },
 
-    -- // Vim-Go: A plugin to enchance go development experience
-    {
-        "fatih/vim-go",
-        lazy = false,
-    },
-
     -- // Cord: discord rich presence
     {
         "vyfor/cord.nvim",

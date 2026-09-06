@@ -9,6 +9,16 @@ return {
     config = function()
         require("mason").setup()
 
+        -- // To automatically install linter for Go
+        local function ensure_installed(pkg)
+            local mr = require("mason-registry")
+            if not mr.is_installed(pkg) then
+                vim.cmd("MasonInstall " .. pkg)
+            end
+        end
+
+        ensure_installed("golangci-lint")
+
         -- // I am enabling and installing the lsps I use // --
         -- // You can add or remove the ones you want or dont want respectively, in similar fashion // --
         -- // You can manage them through ":Mason" // --
@@ -36,7 +46,7 @@ return {
         })
 
         vim.lsp.enable({
-        --  "bashls",
+            "bashls",
             "clangd",
             "html",
             "cssls",

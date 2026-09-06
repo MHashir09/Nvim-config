@@ -36,6 +36,25 @@ autocmd("ColorScheme", {
     end,
 })
 
+-- // For linting on save for Go lang using golangci-lint
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = "*.go",
+    callback = function()
+        vim.fn.jobstart("golangci-lint run --out-format=line-number", {
+            stdout_buffered = true,
+            on_stdout = function(_, data)
+                if data then
+                    vim.fn.setqflist({}, " ", {
+                        title = "golangci-lint",
+                        lines = data,
+                        efm = "%f:%l:%c: %m",
+                    })
+                end
+            end,
+        })
+    end,
+})
+
 -- // Native terminal settings
 local terminal_buf = -1 -- tracks the terminal buffer across toggles
 local terminal_win = -1 -- tracks the terminal window across toggles
