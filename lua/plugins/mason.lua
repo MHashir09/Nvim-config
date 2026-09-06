@@ -19,6 +19,7 @@ return {
                 "html",
                 "cssls",
                 "lua_ls",
+                "gopls",
                 "emmet_language_server",
                 "pyright",
                 "ts_ls",
@@ -35,12 +36,13 @@ return {
         })
 
         vim.lsp.enable({
-            "bashls",
+        --  "bashls",
             "clangd",
             "html",
             "cssls",
             "lua_ls",
             "emmet_language_server",
+            "gopls",
             "pyright",
             "ts_ls",
             "rust_analyzer",
